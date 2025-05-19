@@ -1,9 +1,14 @@
 package entidades;
 
 import enumerables.FormaPago;
+import lombok.*;
 
 import java.time.LocalDate;
-
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Factura {
     private LocalDate fechaFacturacion;
     private Integer mpPaymentId;
@@ -20,61 +25,7 @@ public class Factura {
         this.totalVenta = totalVenta;
     }
 
-    public LocalDate getFechaFacturacion() {
-        return fechaFacturacion;
-    }
 
-    public void setFechaFacturacion(LocalDate fechaFacturacion) {
-        this.fechaFacturacion = fechaFacturacion;
-    }
-
-    public Integer getMpPaymentId() {
-        return mpPaymentId;
-    }
-
-    public void setMpPaymentId(Integer mpPaymentId) {
-        this.mpPaymentId = mpPaymentId;
-    }
-
-    public Integer getMpMerchantOrderId() {
-        return mpMerchantOrderId;
-    }
-
-    public void setMpMerchantOrderId(Integer mpMerchantOrderId) {
-        this.mpMerchantOrderId = mpMerchantOrderId;
-    }
-
-    public String getMpPreferenceId() {
-        return mpPreferenceId;
-    }
-
-    public void setMpPreferenceId(String mpPreferenceId) {
-        this.mpPreferenceId = mpPreferenceId;
-    }
-
-    public String getMpPaymentType() {
-        return mpPaymentType;
-    }
-
-    public void setMpPaymentType(String mpPaymentType) {
-        this.mpPaymentType = mpPaymentType;
-    }
-
-    public FormaPago getFormaPago() {
-        return formaPago;
-    }
-
-    public void setFormaPago(FormaPago formaPago) {
-        this.formaPago = formaPago;
-    }
-
-    public double getTotalVenta() {
-        return totalVenta;
-    }
-
-    public void setTotalVenta(double totalVenta) {
-        this.totalVenta = totalVenta;
-    }
 
     //Faltan datos.. que son los que creo que no van.
     @Override

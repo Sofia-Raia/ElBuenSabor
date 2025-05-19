@@ -1,8 +1,14 @@
 package entidades;
 
+import lombok.*;
+
 import java.util.HashSet;
 import java.util.Set;
-
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class ArticuloManufacturado extends Articulo {
    private String descripcion;
    private Integer tiempoEstimadoMinutos;
@@ -14,29 +20,6 @@ public class ArticuloManufacturado extends Articulo {
         this.descripcion = descripcion;
     }
 
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public Integer getTiempoEstimadoMinutos() {
-        return tiempoEstimadoMinutos;
-    }
-
-    public void setTiempoEstimadoMinutos(Integer tiempoEstimadoMinutos) {
-        this.tiempoEstimadoMinutos = tiempoEstimadoMinutos;
-    }
-
-    public String getPreparacion() {
-        return preparacion;
-    }
-
-    public void setPreparacion(String preparacion) {
-        this.preparacion = preparacion;
-    }
 
     public void addDetalle(ArticuloManufacturadoDetalle det) {
         if (this.aMd == null) {

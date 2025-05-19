@@ -1,7 +1,14 @@
 package entidades;
 
+import lombok.*;
+
 import java.util.HashSet;
 import java.util.Set;
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 
 public class Empresa {
     private String nombre;
@@ -9,34 +16,11 @@ public class Empresa {
     private Integer cuil;
     private Set<Sucursal> sucursales;
 
-    public Empresa(String nombre, Integer cuil) {
+   public Empresa(String nombre, Integer cuil) {
         this.nombre = nombre;
         this.cuil = cuil;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getRazonSocial() {
-        return razonSocial;
-    }
-
-    public void setRazonSocial(String razonSocial) {
-        this.razonSocial = razonSocial;
-    }
-
-    public Integer getCuil() {
-        return cuil;
-    }
-
-    public void setCuil(Integer cuil) {
-        this.cuil = cuil;
-    }
     public void addSucursal(Sucursal sucursal) {
         if (this.sucursales == null) {
             this.sucursales = new HashSet<Sucursal>();

@@ -90,13 +90,13 @@ public class Main {
         s2.addCategoria(cat2);
         s2.addCategoria(cat3);
 
-        DetallePedido detallePedido = new DetallePedido(am1, 20000.00,1);
+        DetallePedido detallePedido = new DetallePedido(am1,1);
         Factura factura1= new Factura(LocalDate.now(), 22000.00);
         Pedido p1 =new Pedido(20000.00);
         p1.addDetallePedido(detallePedido);
         p1.setFactura(factura1);
 
-        DetallePedido detallePedido1 = new DetallePedido(am2, 22000.00,1);
+        DetallePedido detallePedido1 = new DetallePedido(am2,1);
         Factura factura2= new Factura(LocalDate.now(), 22000.00);
         Pedido p2 =new Pedido(22000.00);
         p2.addDetallePedido(detallePedido1);
@@ -138,7 +138,9 @@ public class Main {
         promo2.setDescripcionDescuento("Bebida gratis");
         promo2.setTipoPromocion(TipoPromocion.HAPPYHOUR);
         System.out.println(promo2);
-
+Empresa em= Empresa.builder()
+        .nombre("sl.sofi")
+        .build();
 
     }
 }

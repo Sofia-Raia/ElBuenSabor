@@ -1,17 +1,20 @@
 package entidades;
 
+import lombok.*;
+
 import java.util.HashSet;
 import java.util.Set;
-
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public abstract class Articulo {
     protected String denominacion;
     protected Double precioVenta;
 
     protected UnidadMedida unidadMedida;
     protected Set<Imagen> imagenes;
-
-    public Articulo() {
-    }
 
     public Articulo(String denominacion, Double precioVenta) {
         this.denominacion = denominacion;
@@ -28,25 +31,19 @@ public abstract class Articulo {
         return denominacion;
     }
 
-    public void setDenominacion(String denominacion) {
-        this.denominacion = denominacion;
-    }
+
 
     public Double getPrecioVenta() {
         return precioVenta;
     }
 
-    public void setPrecioVenta(Double precioVenta) {
-        this.precioVenta = precioVenta;
-    }
+
 
     public UnidadMedida getUnidadMedida() {
         return unidadMedida;
     }
 
-    public void setUnidadMedida(UnidadMedida unidadMedida) {
-        this.unidadMedida = unidadMedida;
-    }
+
 
     public Set<Imagen> getImagenes() {
         return imagenes;

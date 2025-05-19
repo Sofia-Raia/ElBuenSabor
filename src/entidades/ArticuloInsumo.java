@@ -1,5 +1,12 @@
 package entidades;
 
+import lombok.*;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class ArticuloInsumo extends Articulo {
     private double precioCompra;
     private Integer stockActual;
@@ -11,37 +18,7 @@ public class ArticuloInsumo extends Articulo {
         this.precioCompra = precioCompra;
     }
 
-    public double getPrecioCompra() {
-        return precioCompra;
-    }
 
-    public void setPrecioCompra(double precioCompra) {
-        this.precioCompra = precioCompra;
-    }
-
-    public Integer getStockActual() {
-        return stockActual;
-    }
-
-    public void setStockActual(Integer stockActual) {
-        this.stockActual = stockActual;
-    }
-
-    public Integer getStockMaximo() {
-        return stockMaximo;
-    }
-
-    public void setStockMaximo(Integer stockMaximo) {
-        this.stockMaximo = stockMaximo;
-    }
-
-    public boolean isEsParaElaborar() {
-        return esParaElaborar;
-    }
-
-    public void setEsParaElaborar(boolean esParaElaborar) {
-        this.esParaElaborar = esParaElaborar;
-    }
 //no muestro imagen, stockActual, stockMaximo.
     @Override
     public String toString() {

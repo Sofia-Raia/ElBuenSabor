@@ -1,12 +1,18 @@
 package entidades;
 
 import enumerables.TipoPromocion;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.HashSet;
 import java.util.Set;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Promocion {
 private String denominacion;
 private LocalDate fechaDesde;
@@ -24,65 +30,7 @@ private Set<Articulo> articulos;
         this.denominacion = denominacion;
     }
 
-    public String getDenominacion() {
-        return denominacion;
-    }
 
-    public void setDenominacion(String denominacion) {
-        this.denominacion = denominacion;
-    }
-
-    public LocalDate getFechaDesde() {
-        return fechaDesde;
-    }
-
-    public void setFechaDesde(LocalDate fechaDesde) {
-        this.fechaDesde = fechaDesde;
-    }
-
-    public LocalDate getFechaHasta() {
-        return fechaHasta;
-    }
-
-    public void setFechaHasta(LocalDate fechaHasta) {
-        this.fechaHasta = fechaHasta;
-    }
-
-    public LocalTime getHoraDesde() {
-        return horaDesde;
-    }
-
-    public void setHoraDesde(LocalTime horaDesde) {
-        this.horaDesde = horaDesde;
-    }
-
-    public LocalTime getHoraHasta() {
-        return horaHasta;
-    }
-
-    public void setHoraHasta(LocalTime horaHasta) {
-        this.horaHasta = horaHasta;
-    }
-
-    public String getDescripcionDescuento() {
-        return descripcionDescuento;
-    }
-
-    public void setDescripcionDescuento(String descripcionDescuento) {
-        this.descripcionDescuento = descripcionDescuento;
-    }
-
-    public Double getPrecioPromocional() {
-        return precioPromocional;
-    }
-
-    public void setPrecioPromocional(Double precioPromocional) {
-        this.precioPromocional = precioPromocional;
-    }
-
-    public TipoPromocion getTipoPromocion() {
-        return tipoPromocion;
-    }
     //se lo deje por defecto..
     public void setTipoPromocion(TipoPromocion tipoPromocion) {
         this.tipoPromocion = tipoPromocion.HAPPYHOUR;

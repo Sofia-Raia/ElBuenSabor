@@ -1,8 +1,15 @@
 package entidades;
 
+import lombok.*;
+
 import java.util.HashSet;
 import java.util.Set;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Categoria {
     private String denominacion;
 
@@ -15,21 +22,6 @@ public class Categoria {
         this.denominacion = denominacion;
     }
 
-    public String getDenominacion() {
-        return denominacion;
-    }
-
-    public void setDenominacion(String denominacion) {
-        this.denominacion = denominacion;
-    }
-
-    public Categoria getCategoriaPadre() {
-        return categoriaPadre;
-    }
-
-    public void setCategoriaPadre(Categoria categoriaPadre) {
-        this.categoriaPadre = categoriaPadre;
-    }
 
     public void addArticulo(Articulo articulo) {
         if (articulosDeLaCategoria == null) {
