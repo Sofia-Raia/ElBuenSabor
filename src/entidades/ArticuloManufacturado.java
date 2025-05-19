@@ -1,10 +1,13 @@
 package entidades;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class ArticuloManufacturado extends Articulo {
    private String descripcion;
    private Integer tiempoEstimadoMinutos;
    private String preparacion;
-    private ArticuloManufacturadoDetalle aMd;
+    private Set<ArticuloManufacturadoDetalle> aMd;
 
     public ArticuloManufacturado(String denominacion, Double precioVenta, UnidadMedida unidadMedida, String descripcion) {
         super(denominacion, precioVenta, unidadMedida);
@@ -35,12 +38,14 @@ public class ArticuloManufacturado extends Articulo {
         this.preparacion = preparacion;
     }
 
-    public ArticuloManufacturadoDetalle getaMd() {
-        return aMd;
+    public void addDetalle(ArticuloManufacturadoDetalle det) {
+        if (this.aMd == null) {
+            this.aMd = new HashSet<ArticuloManufacturadoDetalle>();
+        }
+        this.aMd.add(det);
     }
-
-    public void setaMd(ArticuloManufacturadoDetalle aMd) {
-        this.aMd = aMd;
+    public void removeDetalle(ArticuloManufacturadoDetalle det) {
+        this.aMd.remove(det);
     }
 //no muestra preparacion ni detalle.
     @Override

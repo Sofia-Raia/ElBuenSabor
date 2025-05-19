@@ -38,10 +38,10 @@ public class Main {
         ArticuloInsumo levadura = new ArticuloInsumo("Levadura", 9.99, kg, 5.0);
         ArticuloManufacturadoDetalle amd1 = new ArticuloManufacturadoDetalle(1, harina);
         ArticuloManufacturado am1 = new ArticuloManufacturado("Pizza",20000.00, pequeno,"Pizza Napolitana");
-        am1.setaMd(amd1);
+        am1.addDetalle(amd1);
         ArticuloManufacturadoDetalle amd2 = new ArticuloManufacturadoDetalle(2, levadura);
         ArticuloManufacturado am2 = new ArticuloManufacturado("Pizza",22000.00, pequeno,"Pizza Calabresa");
-        am2.setaMd(amd2);
+        am2.addDetalle(amd2);
         Imagen img1 = new Imagen("promo1imagen1.jpg");
         Imagen img2 = new Imagen("promo1imagen2.jpg");
         Promocion promo1 = new Promocion("San Juan");

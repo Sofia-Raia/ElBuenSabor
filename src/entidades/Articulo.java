@@ -1,11 +1,14 @@
 package entidades;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public abstract class Articulo {
     protected String denominacion;
     protected Double precioVenta;
 
     protected UnidadMedida unidadMedida;
-    protected Imagen imagen;
+    protected Set<Imagen> imagenes;
 
     public Articulo() {
     }
@@ -45,13 +48,19 @@ public abstract class Articulo {
         this.unidadMedida = unidadMedida;
     }
 
-    public Imagen getImagen() {
-        return imagen;
+    public Set<Imagen> getImagenes() {
+        return imagenes;
     }
 
-    public void setImagen(Imagen imagen) {
-        this.imagen = imagen;
-    }
+    public void addImagen(Imagen imagen) {
+        if (imagenes == null) {
+            imagenes = new HashSet<Imagen>();
+        }
+        this.imagenes.add(imagen);
+  }
+  public void removeImagen(Imagen imagen) {
+        this.imagenes.remove(imagen);
+  }
 //no muestro imagen.
     @Override
     public String toString() {
